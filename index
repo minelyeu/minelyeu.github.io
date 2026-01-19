@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Визитка</title>
+</head>
+<body>
+  <h1>Привет! 👋</h1>
+  <p>
+    Я начинающий программист. Изучаю веб-разработку и создаю свои первые проекты. 
+    Постоянно учусь и развиваюсь в области IT.
+  </p>
+
+  <h3>Контакты</h3>
+  <p>
+    Telegram: <strong><a href="https://t.me/amisoeu">@amisoeu</a></strong><br>
+    GitHub: <strong><a href="https://github.com/minelyeu">github.com/minelyeu</a></strong>
+  </p>
+
+  <h3>Изучаемые языки программирования</h3>
+  <ul>
+    <li><strong>HTML</strong></li>
+    <li><strong>CSS</strong></li>
+    <li><strong>JavaScript</strong></li>
+    <li><strong>Python</strong></li>
+    <li><strong>Ruby</strong></li>
+  </ul>
+
+</body>
+</html>
