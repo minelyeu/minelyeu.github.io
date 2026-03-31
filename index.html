@@ -1,9 +1,10 @@
+
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Визитка — amisoeu</title>
+  <title>Pages — amisoeu</title>
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#22c55e;--glass:rgba(255,255,255,0.04)}
     body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071026 0%, #071020 60%),var(--bg);color:#e6eef6;margin:0;padding:40px;display:flex;align-items:center;justify-content:center;min-height:100vh}
@@ -20,12 +21,15 @@
     .side{background:var(--card);padding:18px;border-radius:10px;color:var(--muted)}
     h2{margin:0 0 12px;font-size:18px;color:#e6eef6}
     .projects{display:flex;flex-direction:column;gap:12px}
-    .project{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
-    .project h3{margin:0;font-size:16px;color:#dff7e0}
+    .project-link{display:block;text-decoration:none;color:inherit}
+    .project{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);transition:transform .12s ease,box-shadow .12s ease}
+    .project:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .project h3{margin:0;font-size:16px;color:#dff7e0;display:flex;justify-content:space-between;align-items:center;gap:10px}
     .project p{margin:6px 0 0;color:var(--muted);font-size:14px}
     .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
     .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
     footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    .repo{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02)}
     @media (max-width:800px){section{grid-template-columns:1fr}}
   </style>
 </head>
@@ -47,45 +51,53 @@
       <div class="main">
         <h2>Проекты</h2>
         <div class="projects">
-          <article class="project" id="fitnessbot">
-            <h3>FitnessBot</h3>
-            <p>Телеграм‑бот, который помогает в фитнесе: создаёт планы тренировок, считает подходы/повторы, напоминания о тренировках и отслеживает прогресс.</p>
-            <div class="tags">
-              <span class="tag">Telegram Bot</span>
-              <span class="tag">Python</span>
-              <span class="tag">APIs</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/NoLlyTre/Fitnes-bot-python" target="_blank" rel="noopener">
+            <article class="project" id="fitnessbot">
+              <h3>FitnessBot</h3>
+              <p>Телеграм‑бот, который помогает в фитнесе: создаёт планы тренировок, считает подходы/повторы, напоминания о тренировках и отслеживает прогресс.</p>
+              <div class="tags">
+                <span class="tag">Telegram Bot</span>
+                <span class="tag">Python</span>
+                <span class="tag">APIs</span>
+              </div>
+            </article>
+          </a>
 
-          <article class="project" id="kenzostore">
-            <h3>KENZOSTORE</h3>
-            <p>Интернет‑магазин электроники с каталогом товаров, корзиной и оформлением заказа. Адаптивный интерфейс, простая админ‑панель для управления товарами.</p>
-            <div class="tags">
-              <span class="tag">Frontend</span>
-              <span class="tag">E‑commerce</span>
-              <span class="tag">HTML/CSS/JS</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/minelyeu/KENZOSTORE" target="_blank" rel="noopener">
+            <article class="project" id="kenzostore">
+              <h3>KENZOSTORE</h3>
+              <p>Интернет‑магазин электроники с каталогом товаров, корзиной и оформлением заказа. Адаптивный интерфейс, простая админ‑панель для управления товарами.</p>
+              <div class="tags">
+                <span class="tag">Frontend</span>
+                <span class="tag">E‑commerce</span>
+                <span class="tag">HTML/CSS/JS</span>
+              </div>
+            </article>
+          </a>
 
-          <article class="project" id="passgen">
-            <h3>PassGen</h3>
-            <p>Генератор паролей с настройками длины, включения символов/цифр/заглавных букв и опцией копирования в буфер обмена.</p>
-            <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Security tool</span>
-              <span class="tag">Utilities</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/minelyeu/pass_gen" target="_blank" rel="noopener">
+            <article class="project" id="passgen">
+              <h3>PassGen</h3>
+              <p>Генератор паролей с настройками длины, включения символов/цифр/заглавных букв и опцией копирования в буфер обмена.</p>
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Security tool</span>
+                <span class="tag">Utilities</span>
+              </div>
+            </article>
+          </a>
 
-          <article class="project" id="enterra">
-            <h3>Enterra</h3>
-            <p>Развлекательный портал с подборкой новостей, мемов, тестов и развлекательного контента — адаптивный сайт с удобной навигацией и разделами по тематикам.</p>
-            <div class="tags">
-              <span class="tag">Portal</span>
-              <span class="tag">Frontend</span>
-              <span class="tag">Content</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/ProtheticGlitch/Enterra" target="_blank" rel="noopener">
+            <article class="project" id="enterra">
+              <h3>Enterra</h3>
+              <p>Развлекательный портал с подборкой новостей, мемов, тестов и развлекательного контента — адаптивный сайт с удобной навигацией и разделами по тематикам.</p>
+              <div class="tags">
+                <span class="tag">Portal</span>
+                <span class="tag">Frontend</span>
+                <span class="tag">Content</span>
+              </div>
+            </article>
+          </a>
         </div>
 
         <h2 style="margin-top:18px">Навыки</h2>
