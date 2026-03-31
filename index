@@ -1,4 +1,4 @@
-Готово — добавил ссылки на репозитории в карточки проектов. Сохраните как index.html.
+Готово — ниже полный index.html с карточками проектов, которые можно кликнуть целиком (открывают репозиторий в новой вкладке). Сохраните как index.html.
 
 ```html
 <!doctype html>
@@ -23,14 +23,15 @@
     .side{background:var(--card);padding:18px;border-radius:10px;color:var(--muted)}
     h2{margin:0 0 12px;font-size:18px;color:#e6eef6}
     .projects{display:flex;flex-direction:column;gap:12px}
-    .project{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+    .project-link{display:block;text-decoration:none;color:inherit}
+    .project{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);transition:transform .12s ease,box-shadow .12s ease}
+    .project:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
     .project h3{margin:0;font-size:16px;color:#dff7e0;display:flex;justify-content:space-between;align-items:center;gap:10px}
     .project p{margin:6px 0 0;color:var(--muted);font-size:14px}
     .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
     .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
-    .repo{margin-left:10px;font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02)}
-    .repo:hover{outline:1px solid rgba(255,255,255,0.03)}
     footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    .repo{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02)}
     @media (max-width:800px){section{grid-template-columns:1fr}}
   </style>
 </head>
@@ -52,57 +53,53 @@
       <div class="main">
         <h2>Проекты</h2>
         <div class="projects">
-          <article class="project" id="fitnessbot">
-            <h3>
-              <span>FitnessBot</span>
-              <a class="repo" href="https://github.com/NoLlyTre/Fitnes-bot-python" target="_blank" rel="noopener">Repo</a>
-            </h3>
-            <p>Телеграм‑бот, который помогает в фитнесе: создаёт планы тренировок, считает подходы/повторы, напоминания о тренировках и отслеживает прогресс.</p>
-            <div class="tags">
-              <span class="tag">Telegram Bot</span>
-              <span class="tag">Python</span>
-              <span class="tag">APIs</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/NoLlyTre/Fitnes-bot-python" target="_blank" rel="noopener">
+            <article class="project" id="fitnessbot">
+              <h3>FitnessBot</h3>
+              <p>Телеграм‑бот, который помогает в фитнесе: создаёт планы тренировок, считает подходы/повторы, напоминания о тренировках и отслеживает прогресс.</p>
+              <div class="tags">
+                <span class="tag">Telegram Bot</span>
+                <span class="tag">Python</span>
+                <span class="tag">APIs</span>
+              </div>
+            </article>
+          </a>
 
-          <article class="project" id="kenzostore">
-            <h3>
-              <span>KENZOSTORE</span>
-              <a class="repo" href="https://github.com/minelyeu/KENZOSTORE" target="_blank" rel="noopener">Repo</a>
-            </h3>
-            <p>Интернет‑магазин электроники с каталогом товаров, корзиной и оформлением заказа. Адаптивный интерфейс, простая админ‑панель для управления товарами.</p>
-            <div class="tags">
-              <span class="tag">Frontend</span>
-              <span class="tag">E‑commerce</span>
-              <span class="tag">HTML/CSS/JS</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/minelyeu/KENZOSTORE" target="_blank" rel="noopener">
+            <article class="project" id="kenzostore">
+              <h3>KENZOSTORE</h3>
+              <p>Интернет‑магазин электроники с каталогом товаров, корзиной и оформлением заказа. Адаптивный интерфейс, простая админ‑панель для управления товарами.</p>
+              <div class="tags">
+                <span class="tag">Frontend</span>
+                <span class="tag">E‑commerce</span>
+                <span class="tag">HTML/CSS/JS</span>
+              </div>
+            </article>
+          </a>
 
-          <article class="project" id="passgen">
-            <h3>
-              <span>PassGen</span>
-              <a class="repo" href="https://github.com/minelyeu/pass_gen" target="_blank" rel="noopener">Repo</a>
-            </h3>
-            <p>Генератор паролей с настройками длины, включения символов/цифр/заглавных букв и опцией копирования в буфер обмена.</p>
-            <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Security tool</span>
-              <span class="tag">Utilities</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/minelyeu/pass_gen" target="_blank" rel="noopener">
+            <article class="project" id="passgen">
+              <h3>PassGen</h3>
+              <p>Генератор паролей с настройками длины, включения символов/цифр/заглавных букв и опцией копирования в буфер обмена.</p>
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Security tool</span>
+                <span class="tag">Utilities</span>
+              </div>
+            </article>
+          </a>
 
-          <article class="project" id="enterra">
-            <h3>
-              <span>Enterra</span>
-              <a class="repo" href="https://github.com/ProtheticGlitch/Enterra" target="_blank" rel="noopener">Repo</a>
-            </h3>
-            <p>Развлекательный портал с подборкой новостей, мемов, тестов и развлекательного контента — адаптивный сайт с удобной навигацией и разделами по тематикам.</p>
-            <div class="tags">
-              <span class="tag">Portal</span>
-              <span class="tag">Frontend</span>
-              <span class="tag">Content</span>
-            </div>
-          </article>
+          <a class="project-link" href="https://github.com/ProtheticGlitch/Enterra" target="_blank" rel="noopener">
+            <article class="project" id="enterra">
+              <h3>Enterra</h3>
+              <p>Развлекательный портал с подборкой новостей, мемов, тестов и развлекательного контента — адаптивный сайт с удобной навигацией и разделами по тематикам.</p>
+              <div class="tags">
+                <span class="tag">Portal</span>
+                <span class="tag">Frontend</span>
+                <span class="tag">Content</span>
+              </div>
+            </article>
+          </a>
         </div>
 
         <h2 style="margin-top:18px">Навыки</h2>
