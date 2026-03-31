@@ -1,30 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Визитка</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Визитка — amisoeu</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#22c55e;--glass:rgba(255,255,255,0.04)}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071026 0%, #071020 60%),var(--bg);color:#e6eef6;margin:0;padding:40px;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .wrap{width:100%;max-width:900px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:28px;box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,#0ea5a4,#22c55e);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#021018}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:8px 0 18px}
+    .contacts{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;text-decoration:none}
+    a.chip:hover{outline:1px solid rgba(255,255,255,0.04)}
+    section{margin-top:20px;display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .main{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:18px;border-radius:10px}
+    .side{background:var(--card);padding:18px;border-radius:10px;color:var(--muted)}
+    h2{margin:0 0 12px;font-size:18px;color:#e6eef6}
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0;font-size:16px;color:#dff7e0}
+    .project p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:800px){section{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <h1>Привет! 👋</h1>
-  <p>
-    Я начинающий программист. Изучаю веб-разработку и создаю свои первые проекты. 
-    Постоянно учусь и развиваюсь в области IT.
-  </p>
+  <div class="wrap" role="main">
+    <header>
+      <div class="avatar">AM</div>
+      <div>
+        <h1>Привет! Я — amisoeu</h1>
+        <p class="lead">Начинающий программист. Изучаю веб‑разработку и создаю первые проекты.</p>
+        <div class="contacts">
+          <a class="chip" href="https://t.me/amisoeu" target="_blank" rel="noopener">Telegram: @amisoeu</a>
+          <a class="chip" href="https://github.com/minelyeu" target="_blank" rel="noopener">GitHub: minelyeu</a>
+        </div>
+      </div>
+    </header>
 
-  <h3>Контакты</h3>
-  <p>
-    Telegram: <strong><a href="https://t.me/amisoeu">@amisoeu</a></strong><br>
-    GitHub: <strong><a href="https://github.com/minelyeu">github.com/minelyeu</a></strong>
-  </p>
+    <section>
+      <div class="main">
+        <h2>Проекты</h2>
+        <div class="projects">
+          <article class="project" id="fitnessbot">
+            <h3>FitnessBot</h3>
+            <p>Телеграм‑бот, который помогает в фитнесе: создаёт планы тренировок, считает подходы/повторы, напоминания о тренировках и отслеживает прогресс.</p>
+            <div class="tags">
+              <span class="tag">Telegram Bot</span>
+              <span class="tag">Python</span>
+              <span class="tag">APIs</span>
+            </div>
+          </article>
 
-  <h3>Изучаемые языки программирования</h3>
-  <ul>
-    <li><strong>HTML</strong></li>
-    <li><strong>CSS</strong></li>
-    <li><strong>JavaScript</strong></li>
-    <li><strong>Python</strong></li>
-    <li><strong>Ruby</strong></li>
-  </ul>
+          <article class="project" id="kenzostore">
+            <h3>KENZOSTORE</h3>
+            <p>Интернет‑магазин электроники с каталогом товаров, корзиной и оформлением заказа. Адаптивный интерфейс, простая админ‑панель для управления товарами.</p>
+            <div class="tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">E‑commerce</span>
+              <span class="tag">HTML/CSS/JS</span>
+            </div>
+          </article>
 
+          <article class="project" id="passgen">
+            <h3>PassGen</h3>
+            <p>Генератор паролей с настройками длины, включения символов/цифр/заглавных букв и опцией копирования в буфер обмена.</p>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Security tool</span>
+              <span class="tag">Utilities</span>
+            </div>
+          </article>
+
+          <article class="project" id="enterra">
+            <h3>Enterra</h3>
+            <p>Развлекательный портал с подборкой новостей, мемов, тестов и развлекательного контента — адаптивный сайт с удобной навигацией и разделами по тематикам.</p>
+            <div class="tags">
+              <span class="tag">Portal</span>
+              <span class="tag">Frontend</span>
+              <span class="tag">Content</span>
+            </div>
+          </article>
+        </div>
+
+        <h2 style="margin-top:18px">Навыки</h2>
+        <p style="color:var(--muted)">HTML · CSS · JavaScript · Python · Ruby</p>
+      </div>
+
+      <aside class="side">
+        <h2>Обо мне</h2>
+        <p>Постоянно учусь и развиваюсь в области IT. Работаю над практическими проектами, чтобы улучшать навыки веб‑разработки и автоматизации.</p>
+
+        <h2 style="margin-top:12px">Связаться</h2>
+        <p style="color:var(--muted);margin:0 0 10px">Напишите в Telegram или посмотрите репозитории на GitHub.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="chip" href="https://t.me/amisoeu" target="_blank" rel="noopener">Telegram</a>
+          <a class="chip" href="https://github.com/minelyeu" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © 2026 amisoeu — Мои первые проекты
+    </footer>
+  </div>
 </body>
 </html>
