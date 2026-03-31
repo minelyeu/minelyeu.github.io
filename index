@@ -1,11 +1,9 @@
-
-
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Визитка — amisoeu</title>
+  <title>Pages — amisoeu</title>
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#22c55e;--glass:rgba(255,255,255,0.04)}
     body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071026 0%, #071020 60%),var(--bg);color:#e6eef6;margin:0;padding:40px;display:flex;align-items:center;justify-content:center;min-height:100vh}
